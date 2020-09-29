@@ -8,20 +8,32 @@
     <style>
         .container {
             display: flex;
-            flex-wrap: wrap;
-        }
+            flex-direction: column;
 
-        .container * {
-            flex: 1;
+
         }
 
         #code {
             font-size: 1.1rem;
-            height: 50vh;
+
         }
 
         #iframe {
             height: 50vh;
+        }
+
+        @media screen and (min-width:500px) {
+            .container {
+                flex-direction: row;
+            }
+
+            .container * {
+                flex: 1;
+            }
+
+            #iframe {
+                height: 100vh;
+            }
         }
     </style>
 </head>
@@ -30,7 +42,7 @@
 
     <div class="container">
         <iframe id="iframe"></iframe>
-        <textarea id="code" placeholder="Write some HTML"></textarea>
+        <textarea id="code" placeholder="Write some HTML" rows="20"></textarea>
     </div>
     <script>
         let iframe = document.getElementById("iframe");
