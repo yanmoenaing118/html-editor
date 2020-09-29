@@ -24,11 +24,18 @@
 <body>
 
     <div class="container">
-        <textarea id="code" placeholder="Write Some HTML"></textarea>
+        <textarea id="code"></textarea>
         <iframe id="iframe"></iframe>
     </div>
+    <script>
+        let iframe = document.getElementById("iframe");
+        let code = document.getElementById("code");
+        code.addEventListener("input", e => {
+            let iDoc = iframe.contentDocument;
+            iDoc.body.innerHTML = e.target.value;
+        })
+    </script>
 
-    <script src="app.js"></script>
 </body>
 
 </html>
