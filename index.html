@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .container * {
+            flex: 1;
+            height: 100vh;
+        }
+
+        #code {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <textarea id="code" placeholder="Write Some HTML"></textarea>
+        <iframe id="iframe"></iframe>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
